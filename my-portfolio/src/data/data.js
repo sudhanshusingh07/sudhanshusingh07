@@ -62,6 +62,25 @@ export const projects = [
         description: 'An ecommerce app created using nextjs',
         source: 'https://github.com/sudhanshusingh07',
         demo: 'https://github.com/sudhanshusingh07'
+    },
+    {
+        id: 3,
+        year: 2024,
+        title: 'Weather-App',
+        level: 'Easy',
+        description: 'A weather app created using js,api',
+        source: 'https://github.com/sudhanshusingh07/JAVA_Script_minor_projects/tree/main/weather-app',
+        demo: 'https://weather-app-xi-blond-44.vercel.app/'
+    },
+    {
+        id: 4,
+        year: 2024,
+        title: 'Quiz-App',
+        level: 'Easy',
+        description: 'A quiz app created using js,api',
+        source: 'https://github.com/sudhanshusingh07/Quiz-games',
+        demo: 'https://quiz-games-fawn.vercel.app/'
     }
+
 ]
 

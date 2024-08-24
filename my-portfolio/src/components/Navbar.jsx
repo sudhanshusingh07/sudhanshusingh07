@@ -70,7 +70,7 @@ function Navbar() {
     }, [])
 
     return (
-        <nav className="fixed top-0 py-3 sm:py-5 px-5 md:px-0 inset-x-0 w-full mx-auto bg-white/95 dark:bg-gray-primary/95">
+        <nav className="fixed top-0 py-3 sm:py-5 px-5 md:px-0 inset-x-0 w-full mx-auto bg-gradient-to-r from-sky-100 to-pink-100 dark:bg-gray-primary/95">
             <div className="w-full max-w-2xl mx-auto flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
                 <div className="w-full py-1 flex items-center justify-between sm:hidden ">
                     <img className="w-10 h-10 rounded-full" src="/logo.jpg" alt="logo" />

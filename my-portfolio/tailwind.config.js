@@ -1,3 +1,5 @@
+
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -5,8 +7,22 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // Gray shades
+        'gray-primary': '#181818',
+        'gray-secondary': '#2c2c2c',
+        'gray-tertiary': '#505050',
+        'gray-dark': '#242424',
+      },
+      fontFamily: {
+        // Fonts goes here
+      },
+      screens : {
+        'xs': '390px'
+      }
+    },
   },
+  darkMode: 'class',
   plugins: [],
 }
-
