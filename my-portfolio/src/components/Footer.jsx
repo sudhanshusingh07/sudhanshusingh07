@@ -1,4 +1,5 @@
-import { Github, Instagram } from "../data/links"
+
+import { Github, Instagram, Linkedin} from "../data/links"
 import React from 'react';
 
 function Footer() {
@@ -18,6 +19,12 @@ function Footer() {
                     <img className="w-6" src="/instagram.png" alt="instagram" />
                     <a className="hover:underline" target="_blank" href={Instagram}>
                         Instagram
+                    </a>
+                </li>
+                <li className="flex items-center gap-2">
+                    <img className="w-7" src="/linkedin.jpg" alt="linkedin" />
+                    <a className="hover:underline" target="_blank" href={Linkedin}>
+                        Linkedin
                     </a>
                 </li>
             </ul>
