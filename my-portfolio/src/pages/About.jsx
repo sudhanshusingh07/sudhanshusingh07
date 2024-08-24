@@ -1,5 +1,6 @@
 import Link from "../components/ui/Link";
-import { College, CSS, Express, Git, HTML, JS, Nextjs, Nodejs, React, TailwindCSS } from "../data/links";
+import { College, CSS, Express, Git, HTML, JS, Nextjs, Nodejs, TailwindCSS } from "../data/links";
+import React from "react";
 
 function About() {
     return (
