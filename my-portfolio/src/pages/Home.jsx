@@ -25,10 +25,10 @@ function Home() {
                     Specialties
                 </h3>
 
-                <ul className="flex flex-col sm:flex-row flex-wrap gap-2 mt-4 items-start">
+                <ul className="flex flex-col sm:flex-row flex-wrap gap-2 mt-4 items-start ">
                     {
-                        skills.map(skill => (
-                            <li key={skill.description} className="flex items-center gap-2 md:border border-gray-300 dark:md:border-gray-secondary md:p-3 rounded-lg w-full md:max-w-xs h-full md:h-20">
+                        skills.map(skill => ( 
+                            <li key={skill.description} className="dark:bg-gray-secondary bg-gray-200 flex items-center gap-2 md:border border-gray-300 dark:md:border-gray-secondary md:p-3 rounded-lg w-full md:max-w-xs h-full md:h-20">
                                 <i className={`${skill.iconClass} text-3xl`} alt="skillIcon" />
                                 <p className="text-base font-medium dark:text-gray-200 text-gray-700">
                                     {skill.description}

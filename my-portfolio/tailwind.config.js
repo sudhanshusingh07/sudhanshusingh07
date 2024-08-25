@@ -14,6 +14,7 @@ export default {
         'gray-secondary': '#2c2c2c',
         'gray-tertiary': '#505050',
         'gray-dark': '#242424',
+        'skypink' : 'gradient-to-r from-sky-100 to-pink-100'
       },
       fontFamily: {
         // Fonts goes here

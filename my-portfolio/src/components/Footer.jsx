@@ -22,7 +22,7 @@ function Footer() {
                     </a>
                 </li>
                 <li className="flex items-center gap-2">
-                    <img className="w-7" src="/linkedin.jpg" alt="linkedin" />
+                    <img className="w-7" src="/linkedin.png" alt="linkedin" />
                     <a className="hover:underline" target="_blank" href={Linkedin}>
                         Linkedin
                     </a>

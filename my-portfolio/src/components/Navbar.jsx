@@ -1,90 +1,81 @@
-import { NavLink } from "react-router-dom"
-import Button from "./ui/Button"
-import { useEffect, useState } from "react"
-import { Github } from "../data/links"
-import Carousel from "./ui/Carousel"
+import { NavLink } from "react-router-dom";
+import Button from "./ui/Button";
+import { useEffect, useState } from "react";
+import { Github } from "../data/links";
+import Carousel from "./ui/Carousel";
 import React from 'react';
 
 const navs = [
-    {
-        id: 1,
-        name: "Home",
-        path: "/",
-        icon: "/house.png",
-        className: "w-5 h-5"
+    { id: 1,
+    name: "Home", 
+    path: "/", 
+    icon: "/house.png", 
+    className: "w-5 h-5" 
     },
-    {
-        id: 2,
-        name: "About",
-        path: "/about",
-        icon: "/about.png",
-        className: "w-5 h-5"
+    { id: 2, 
+    name: "About", 
+    path: "/about", 
+    icon: "/about.png", 
+    className: "w-5 h-5" 
     },
-    {
-        id: 3,
-        name: "Feedback",
-        path: "/feedback",
-        icon: "/feedback.png",
-        className: "w-6 h-6"
+    { id: 3, 
+        name: "Profile", 
+        icon: "/code.png", 
+        className: "w-5 h-5" 
+        },
+    { id: 4, 
+    name: "Feedback", 
+    path: "/feedback", 
+    icon: "/feedback.png", 
+    className: "w-6 h-6" 
     },
-    {
-        id: 4,
-        name: "Github",
-        path: Github,
-        icon: "/github.png",
-        className: "w-5 h-5 dark:invert"
-    },
-]
+    { 
+        id: 5, 
+        name: "Github", 
+        path: Github, 
+        icon: "/github.png", 
+        className: "w-5 h-5 dark:invert" },
+];
 
 function Navbar() {
-
-    const [isdarkMode, setIsDarkMode] = useState(true)
+    const [isDarkMode, setIsDarkMode] = useState(true);
 
     function handleTheme() {
-
-        const htmlElement = document.getElementsByTagName("html")[0].classList;
-
+        const htmlElement = document.documentElement.classList;
         if (htmlElement.contains("dark")) {
-            htmlElement.replace("dark", "light");
+            htmlElement.remove("dark");
             setIsDarkMode(false);
-            localStorage.setItem("theme", "light")
+            localStorage.setItem("theme", "light");
         } else {
-            htmlElement.replace("light", "dark");
+            htmlElement.add("dark");
             setIsDarkMode(true);
-            localStorage.setItem("theme", "dark")
+            localStorage.setItem("theme", "dark");
         }
     }
 
     useEffect(() => {
-
-        const htmlElement = document.getElementsByTagName("html")[0].classList;
-        const themeState = localStorage.getItem("theme")
-
-        // Sets dark as default
-        if (!themeState) {
-            localStorage.setItem("theme", "dark");
+        const themeState = localStorage.getItem("theme");
+        const htmlElement = document.documentElement.classList;
+        if (themeState === "dark") {
             htmlElement.add("dark");
+            setIsDarkMode(true);
         } else {
-            htmlElement.add(themeState)
+            htmlElement.remove("dark");
+            setIsDarkMode(false);
         }
-    }, [])
+    }, []);
 
     return (
-        <nav className="fixed top-0 py-3 sm:py-5 px-5 md:px-0 inset-x-0 w-full mx-auto bg-gradient-to-r from-sky-100 to-pink-100 dark:bg-gray-primary/95">
+        <nav className={`fixed top-0 py-3 sm:py-5 px-5 md:px-0 inset-x-0 w-full mx-auto transition-colors duration-500 ${isDarkMode ? 'bg-black' : 'bg-gradient-to-r from-sky-100 to-pink-100'}`}>
             <div className="w-full max-w-2xl mx-auto flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
-                <div className="w-full py-1 flex items-center justify-between sm:hidden ">
+                <div className="w-full py-1 flex items-center justify-between sm:hidden">
                     <img className="w-10 h-10 rounded-full" src="/logo.jpg" alt="logo" />
-
                     <Button onClick={handleTheme} className="gap-0 rounded-[30rem] px-2 py-2">
-                        {
-                            !isdarkMode ?
-                                (
-                                    <img className="w-5 h-5" src="/sun.png" alt="light-mode" />
-                                ) :
-                                (
-                                    <img className="w-5 h-5" src="/moon.png" alt="dark-mode" />
-                                )
-                        }
+                        <img
+                            className="w-5 h-5"
+                            src={isDarkMode ? "/moon.png" : "/sun.png"}
+                            alt={isDarkMode ? "dark-mode" : "light-mode"}
+                        />
                     </Button>
                 </div>
 
@@ -97,7 +88,7 @@ function Navbar() {
                                     `dark:hover:bg-gray-secondary hover:bg-gray-200 w-fit p-2 rounded-md border dark:border-gray-secondary border-gray-300 text-gray-700 dark:text-gray-300 transition-colors duration-300 flex items-center gap-2 snap-end ${isActive && 'dark:bg-gray-secondary bg-gray-200 dark:text-gray-100 text-gray-600'}`
                                 }
                             >
-                                <img className={nav.className} src={nav.icon} alt="navIcon" />
+                                <img className={nav.className} src={nav.icon} alt={nav.name} />
                                 <p>{nav.name}</p>
                             </NavLink>
                         </li>
@@ -105,19 +96,17 @@ function Navbar() {
                 </Carousel>
 
                 <Button onClick={handleTheme} className="gap-0 hidden sm:block w-14 rounded-[30rem] px-2 py-2">
-                    {
-                        !isdarkMode ?
-                            (
-                                <img className="w-5 h-5" src="/sun.png" alt="light-mode" />
-                            ) :
-                            (
-                                <img className="w-5 h-5" src="/moon.png" alt="dark-mode" />
-                            )
-                    }
+                    <img
+                        className="w-5 h-5"
+                        src={isDarkMode ? "/sun.png" : "/moon.png"}
+                        alt={isDarkMode ? "dark-mode" : "light-mode"}
+                    />
                 </Button>
             </div>
         </nav>
-    )
+
+        
+    );
 }
 
-export default Navbar
+export default Navbar;
