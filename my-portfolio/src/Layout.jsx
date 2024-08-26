@@ -2,7 +2,6 @@ import React from 'react';
 import { Outlet } from "react-router-dom";
 import { Navbar } from "./components";
 import Footer from "./components/Footer";
-import Profile from "./pages/Profile";
 
 
 function Layout() {
@@ -16,7 +15,6 @@ function Layout() {
             </div>
 
             <Footer />
-            <Profile />
         </div>
     )
 }

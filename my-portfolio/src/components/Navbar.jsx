@@ -1,44 +1,24 @@
 import { NavLink } from "react-router-dom";
 import Button from "./ui/Button";
-import { useEffect, useState } from "react";
+import Profile from "../pages/Profile";
+import { useEffect, useState, useRef } from "react";
 import { Github } from "../data/links";
 import Carousel from "./ui/Carousel";
 import React from 'react';
 
 const navs = [
-    { id: 1,
-    name: "Home", 
-    path: "/", 
-    icon: "/house.png", 
-    className: "w-5 h-5" 
-    },
-    { id: 2, 
-    name: "About", 
-    path: "/about", 
-    icon: "/about.png", 
-    className: "w-5 h-5" 
-    },
-    { id: 3, 
-        name: "Profile", 
-        icon: "/code.png", 
-        className: "w-5 h-5" 
-        },
-    { id: 4, 
-    name: "Feedback", 
-    path: "/feedback", 
-    icon: "/feedback.png", 
-    className: "w-6 h-6" 
-    },
-    { 
-        id: 5, 
-        name: "Github", 
-        path: Github, 
-        icon: "/github.png", 
-        className: "w-5 h-5 dark:invert" },
+    { id: 1, name: "Home", path: "/", icon: "/house.png", className: "w-5 h-5" },
+    { id: 2, name: "About", path: "/about", icon: "/about.png", className: "w-5 h-5" },
+    { id: 3, name: "Profile", icon: "/about.png", className: "w-5 h-5" }, // No 'path' here
+    { id: 4, name: "Feedback", path: "/feedback", icon: "/feedback.png", className: "w-6 h-6" },
+    { id: 5, name: "Github", path: Github, icon: "/github.png", className: "w-5 h-5 dark:invert" },
 ];
 
 function Navbar() {
     const [isDarkMode, setIsDarkMode] = useState(true);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Dropdown state
+    const dropdownRef = useRef(null);
+    const profileButtonRef = useRef(null);
 
     function handleTheme() {
         const htmlElement = document.documentElement.classList;
@@ -65,6 +45,28 @@ function Navbar() {
         }
     }, []);
 
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (
+                dropdownRef.current &&
+                !dropdownRef.current.contains(event.target) &&
+                profileButtonRef.current &&
+                !profileButtonRef.current.contains(event.target)
+            ) {
+                setIsDropdownOpen(false);
+            }
+        }
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
+    function toggleDropdown() {
+        setIsDropdownOpen(prev => !prev);
+    }
+
     return (
         <nav className={`fixed top-0 py-3 sm:py-5 px-5 md:px-0 inset-x-0 w-full mx-auto transition-colors duration-500 ${isDarkMode ? 'bg-black' : 'bg-gradient-to-r from-sky-100 to-pink-100'}`}>
             <div className="w-full max-w-2xl mx-auto flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
@@ -73,7 +75,7 @@ function Navbar() {
                     <Button onClick={handleTheme} className="gap-0 rounded-[30rem] px-2 py-2">
                         <img
                             className="w-5 h-5"
-                            src={isDarkMode ? "/moon.png" : "/sun.png"}
+                            src={isDarkMode ? "/sun.png" : "/moon.png"}
                             alt={isDarkMode ? "dark-mode" : "light-mode"}
                         />
                     </Button>
@@ -81,16 +83,37 @@ function Navbar() {
 
                 <Carousel>
                     {navs.map((nav) => (
-                        <li key={nav.id} className="min-w-fit">
-                            <NavLink
-                                to={nav.path}
-                                className={({ isActive }) =>
-                                    `dark:hover:bg-gray-secondary hover:bg-gray-200 w-fit p-2 rounded-md border dark:border-gray-secondary border-gray-300 text-gray-700 dark:text-gray-300 transition-colors duration-300 flex items-center gap-2 snap-end ${isActive && 'dark:bg-gray-secondary bg-gray-200 dark:text-gray-100 text-gray-600'}`
-                                }
-                            >
-                                <img className={nav.className} src={nav.icon} alt={nav.name} />
-                                <p>{nav.name}</p>
-                            </NavLink>
+                        <li key={nav.id} className="min-w-fit relative">
+                            {nav.name === "Profile" ? (
+                                <div className="relative">
+                                    <button
+                                        ref={profileButtonRef}
+                                        onClick={toggleDropdown}
+                                        className="dark:hover:bg-gray-secondary hover:bg-gray-200 w-fit p-2 rounded-md border dark:border-gray-secondary border-gray-300 text-gray-700 dark:text-gray-300 transition-colors duration-300 flex items-center gap-2 snap-end"
+                                    >
+                                        <img className={nav.className} src={nav.icon} alt={nav.name} />
+                                        <p>{nav.name}</p>
+                                    </button>
+                                    {isDropdownOpen && (
+                                        <div
+                                            ref={dropdownRef}
+                                            className="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-lg z-40"
+                                        >
+                                            <Profile /> {/* Content of the dropdown */}
+                                        </div>
+                                    )}
+                                </div>
+                            ) : (
+                                <NavLink
+                                    to={nav.path}
+                                    className={({ isActive }) =>
+                                        `dark:hover:bg-gray-secondary hover:bg-gray-200 w-fit p-2 rounded-md border dark:border-gray-secondary border-gray-300 text-gray-700 dark:text-gray-300 transition-colors duration-300 flex items-center gap-2 snap-end ${isActive && 'dark:bg-gray-secondary bg-gray-200 dark:text-gray-100 text-gray-600'}`
+                                    }
+                                >
+                                    <img className={nav.className} src={nav.icon} alt={nav.name} />
+                                    <p>{nav.name}</p>
+                                </NavLink>
+                            )}
                         </li>
                     ))}
                 </Carousel>
@@ -104,8 +127,6 @@ function Navbar() {
                 </Button>
             </div>
         </nav>
-
-        
     );
 }
 

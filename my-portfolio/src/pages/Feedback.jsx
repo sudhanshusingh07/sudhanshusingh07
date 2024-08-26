@@ -72,9 +72,7 @@ function Feedback() {
     return (
         <main className="mt-20">
             <div>
-                <h1 className="text-3xl font-bold dark:text-gray-200 text-gray-800">
-                    Feedbacks
-                </h1>
+                
 
                 <div className="mt-5 divide-y divide-yellow-400 space-y-5">
                     {
@@ -108,12 +106,12 @@ function Feedback() {
             </div>
 
             <div className="mt-6">
-                <h1 className="text-3xl font-bold dark:text-gray-200 text-gray-800">
+                <h1 className="text-3xl font-bold text-org">
                     Add your feedback
                 </h1>
 
                 <p className="mt-5 w-full font-medium dark:text-gray-200 text-gray-600 text-lg leading-relaxed">
-                    Thank you for visiting my website. Your feedback helps me improve and provide a better experience for future visitors.
+                    Thank you for visiting my website. Your feedback helps me to improve and provide a better experience for future visitors.
                     Please take a moment to share your thoughts 😇
                 </p>
 

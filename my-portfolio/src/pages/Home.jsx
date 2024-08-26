@@ -12,7 +12,7 @@ function Home() {
 
                 <span>
                     <h1 className="text-3xl font-bold dark:text-gray-200 text-gray-800">
-                        Hey, I&apos;m Sudhanshu
+                        Hey, I&apos;m < i className="text-org">Sudhanshu</i>
                     </h1>
                     <p className="w-full max-w-sm mt-2 font-medium dark:text-gray-200 text-gray-600 text-lg leading-relaxed">
                         I&apos;m a full stack developer with a dream of becoming a senior software engineer one day👨‍🎓
@@ -21,7 +21,7 @@ function Home() {
             </section>
 
             <section className="mt-8">
-                <h3 className="text-xl font-bold dark:text-gray-200 text-gray-600">
+                <h3 className="text-xl font-bold  text-org">
                     Specialties
                 </h3>
 
@@ -40,7 +40,7 @@ function Home() {
             </section>
 
             <section className="mt-8">
-                <h3 className="text-xl font-bold dark:text-gray-200 text-gray-600">
+                <h3 className="text-xl font-bold text-org">
                     My Work
                 </h3>
 
