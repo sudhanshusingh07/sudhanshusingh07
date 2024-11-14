@@ -42,7 +42,9 @@ function About() {
                 <p className="text-gray-600 dark:text-gray-300 text-lg font-medium leading-relaxed">
                     My goal is to leverage my skills and knowledge to create impactful web applications that solve real-world problems. I am excited about the opportunities in frontend development and look forward to collaborating with like-minded professionals to build innovative solutions.
                 </p>
+               
             </section>
+           
         </main>
     );
 }
