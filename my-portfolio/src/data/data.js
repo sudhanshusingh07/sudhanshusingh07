@@ -107,6 +107,11 @@ export const projects = [
         description: 'A quiz app created using api',
         source: 'https://github.com/sudhanshusingh07/Quiz-games',
         demo: 'https://quiz-games-fawn.vercel.app/'
+    },
+    {
+        id: 6,
+        year: 2025,
+        title: 'Other minor projects',
     }
 
 ]
