@@ -50,7 +50,7 @@ function Navbar() {
                         <img
                             className="w-5 h-5"
                             src={isDarkMode ? "/sun.png" : "/moon.png"}
-                            alt={isDarkMode ? "dark-mode" : "light-mode"}
+                            alt={isDarkMode ? "light-mode" : "dark-mode"}
                         />
                     </Button>
                 </div>
@@ -74,8 +74,8 @@ function Navbar() {
                 <Button onClick={handleTheme} className="gap-0 hidden sm:block w-14 rounded-[30rem] px-2 py-2">
                     <img
                         className="w-5 h-5"
-                        src={isDarkMode ? "/moon.png" : "/sun.png"}
-                        alt={isDarkMode ? "dark-mode" : "light-mode"}
+                        src={isDarkMode ? "/sun.png" : "/moon.png"}
+                        alt={isDarkMode ? "light-mode" : "dark-mode"}
                     />
                 </Button>
             </div>
