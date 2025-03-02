@@ -6,11 +6,43 @@ import Carousel from "./ui/Carousel";
 import React from 'react';
 
 const navs = [
-    { id: 1, name: "Home", path: "/", icon: "/house.png", className: "w-5 h-5" },
-    { id: 2, name: "About", path: "/about", icon: "/about.png", className: "w-5 h-5" },
-    { id: 3, name: "Profile", path:"/profile", icon: "/code.png", className: "w-5 h-5" }, // No 'path' here
-    { id: 4, name: "Feedback", path: "/feedback", icon: "/feedback.png", className: "w-6 h-6" },
-    { id: 5, name: "Github", path: Github, icon: "/github.png", className: "w-5 h-5 dark:invert" },
+  { id: 1, name: "Home", path: "/", icon: "/house.png", className: "w-5 h-5" },
+  {
+    id: 2,
+    name: "About",
+    path: "/about",
+    icon: "/about.png",
+    className: "w-5 h-5",
+  },
+  {
+    id: 3,
+    name: "Profile",
+    path: "/profile",
+    icon: "/code.png",
+    className: "w-5 h-5",
+  },
+
+  {
+    id: 4,
+    name: "My Work",
+    path: "/profile",
+    icon: "/code.png",
+    className: "w-5 h-5",
+  },
+  {
+    id: 5,
+    name: "Feedback",
+    path: "/feedback",
+    icon: "/feedback.png",
+    className: "w-6 h-6",
+  },
+  {
+    id: 6,
+    name: "Github",
+    path: Github,
+    icon: "/github.png",
+    className: "w-5 h-5 dark:invert",
+  },
 ];
 
 function Navbar() {
