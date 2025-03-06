@@ -13,19 +13,19 @@
 
 ### Some Stats
 
-<table tableborder=0>
-	<tr>		
-		
-		<th width="50%"><a align="center" href="https://github.com/sudhanshusingh07?tab=repositories?">🌟 Top Lanaguages</a></th>
-	</tr>
-	<tr>
-		
-		<td>
-			<img width="100%" height="auto" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sudhanshusingh07&layout=compact&theme=tokyonight" alt="Top Langs" />
-		</td>
-	</tr>
-	</a>
+<table border="0" width="100%">
+    <tr>
+        <th width="50%" style="text-align: center;">
+            <a href="https://github.com/sudhanshusingh07?tab=repositories">🌟 Top Languages</a>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <img width="100%" height="auto" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sudhanshusingh07&layout=compact&theme=tokyonight" alt="Top Langs" />
+        </td>
+    </tr>
 </table>
+
 
 <details>
 	<summary><strong> 🌟 GitHub Stats </strong></summary>
