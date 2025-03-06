@@ -2,7 +2,8 @@
 
 ## I'm a full stack <𝚍𝚎𝚟𝚎𝚕𝚘𝚙𝚎𝚛 />
 
-### Latest :
+### Currently Working On:
+-[50 day 50 project](https://github.com/sudhanshusingh07/JAVA_Script_minor_projects/tree/main)
 
 
 
