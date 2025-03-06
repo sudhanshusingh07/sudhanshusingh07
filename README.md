@@ -14,6 +14,10 @@
 ### Some Stats
 
 <table tableborder=0>
+	<tr>		
+		
+		<th width="50%"><a align="center" href="https://github.com/sudhanshusingh07?tab=repositories?">🌟 Top Lanaguages</a></th>
+	</tr>
 	<tr>
 		
 		<td>
@@ -22,6 +26,7 @@
 	</tr>
 	</a>
 </table>
+
 <details>
 	<summary><strong> 🌟 GitHub Stats </strong></summary>
 	<table>
