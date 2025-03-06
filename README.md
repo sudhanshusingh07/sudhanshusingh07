@@ -13,7 +13,17 @@
 
 ### Some Stats
 
-
+<table tableborder=0>
+	<tr>
+		<td>					
+			<img width="100%" height="auto" src="https://github-readme-stats.vercel.app/api/wakatime?username=sudhanshusingh07&custom_title=My%20Weekly%20Stats&layout=compact&theme=tokyonight" alt="Wakatime Stats" />
+		</td>
+		<td>
+			<img width="100%" height="auto" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sudhanshusingh07&layout=compact&theme=tokyonight" alt="Top Langs" />
+		</td>
+	</tr>
+	</a>
+</table>
 <details>
 	<summary><strong> 🌟 GitHub Stats </strong></summary>
 	<table>
