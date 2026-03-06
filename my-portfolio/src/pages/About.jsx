@@ -11,20 +11,19 @@ function About() {
 
             <section className="mt-8 flex flex-col gap-4 items-start">
                 <p className="text-gray-600 dark:text-gray-300 text-lg font-medium leading-relaxed">
-                    I&apos;m Sudhanshu Singh, an Engineering Student from
+                    I&apos;m Sudhanshu Singh, a Computer Science Engineering graduate from
                     <Link href={College}>
                         {' '}Shivalik College of Engineering, Dehradun{' '}
-                    </Link>.
-                    I started my journey as a web developer in 2021 and since then, I have learned a lot of technologies.
+                    </Link>(2025).
+                    I started my journey as a web developer in 2021, and since then I have continuously worked on improving my skills and building real-world projects.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 text-lg font-medium leading-relaxed">
-                    My journey began with the basics of
+                    My journey began with the fundamentals of
                     <Link href={HTML}>{' '}HTML{' '}</Link>,
                     <Link href={CSS}>{' '}CSS{' '}</Link>, and
                     <Link href={JS}>{' '}JavaScript{' '}</Link>,
-                    which laid a strong foundation for my frontend development skills. Over time, I have expanded my expertise to include modern frameworks and libraries such as
-                    <Link href={React}>{' '}React{' '}</Link>,
-                    <Link href={Nextjs}>{' '}Next.js{' '}</Link>, and
+                    which helped me build a strong foundation in frontend development. Over time, I have expanded my expertise to include modern frameworks and libraries such as
+                    <Link href={React}>{' '}React{' '}</Link> and
                     <Link href={TailwindCSS}>{' '}Tailwind CSS{' '}</Link>.
                     I am passionate about building responsive and user-friendly web applications that provide a seamless experience across different devices and platforms.
                 </p>
