@@ -1,5 +1,5 @@
 export const Instagram = "https://www.instagram.com"
-export const Github = "https://github.com/Sudhanshusingh07"
+export const MYGithub = "https://github.com/Sudhanshusingh07"
 export const College = "https://shivalikcollege.edu.in/"
 export const HTML = "https://developer.mozilla.org/en-US/docs/Web/HTML"
 export const CSS = "https://developer.mozilla.org/en-US/docs/Web/CSS"
@@ -13,3 +13,5 @@ export const Express = "https://expressjs.com/"
 export const Linkedin="https://www.linkedin.com/in/sudhanshu-singh-ss/"
 export const LeetCode = "https://leetcode.com/u/sudhanshusingh07/";
 export const GeeksforGeeks = "https://www.geeksforgeeks.org/user/sudhanshusfk40/";
+export const Mongodb = "https://www.mongodb.com/";
+export const Rubixe = "https://rubixe.com/";
