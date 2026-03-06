@@ -8,7 +8,7 @@ import {
   JS,
   Nodejs,
   TailwindCSS,
-  React,
+  React as ReactIcon,
   Mongodb,
   Rubixe,
   Github,
@@ -40,7 +40,7 @@ function About() {
           <Link href={JS}> JavaScript </Link>, which helped me build a strong
           foundation in frontend development. Over time, I expanded my expertise
           to modern frameworks and libraries such as
-          <Link href={React}> React </Link> and
+          <Link href={ReactIcon}> React </Link> and
           <Link href={TailwindCSS}> Tailwind CSS </Link>. I am passionate about
           building responsive and user-friendly web applications that provide a
           seamless experience across different devices and platforms.
