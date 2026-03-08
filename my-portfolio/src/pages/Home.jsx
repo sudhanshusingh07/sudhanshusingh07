@@ -1,70 +1,95 @@
 import Project from "../components/ui/Project"
 import React from 'react';
 
-import { projects, skills } from "../data/data"
+import { projects, skills, experiences } from "../data/data";
+import Link from "../components/ui/Link";
+import {
+  
+  Rubixe
+ 
+} from "../data/links";
 
 function Home() {
 
     return (
-        <main>
-            <section className="mt-28 sm:mt-16 flex flex-col gap-4 items-start sm:flex-row-reverse sm:items-center justify-between">
-                <img className="w-32 h-32 my-2" src="./DanceBot.gif" alt="enderman" />
+      <main>
+        <section className="mt-28 sm:mt-16 flex flex-col gap-4 items-start sm:flex-row-reverse sm:items-center justify-between">
+          <img className="w-32 h-32 my-2" src="./DanceBot.gif" alt="enderman" />
 
-                <span>
-                    <h1 className="text-3xl font-bold dark:text-gray-200 text-gray-800">
-                        Hey, I&apos;m < i className="text-org">Sudhanshu Singh</i>
-                    </h1>
-                    <p className="w-full max-w-sm mt-2 font-medium dark:text-gray-200 text-gray-600 text-lg leading-relaxed">
-                        I&apos;m a full stack developer in Rubix.
-                    </p>
-                </span>
-            </section>
+          <span>
+            <h1 className="text-3xl font-bold dark:text-gray-200 text-gray-800">
+              Hey, I&apos;m <i className="text-org">Sudhanshu Singh</i>
+            </h1>
+            <p className="w-full max-w-sm mt-2 font-medium dark:text-gray-200 text-gray-600 text-lg leading-relaxed">
+              I&apos;m a full stack developer at{" "}
+              <Link href={Rubixe}>Rubixe - AI Solutions Company.</Link>
+            </p>
+          </span>
+        </section>
 
-            <section className="mt-8">
-                <h3 className="text-xl font-bold  text-org">
-                    Specialties
-                </h3>
+        <section className="mt-8">
+          <h3 className="text-xl font-bold text-org">Experience</h3>
 
-                <ul className="flex flex-col sm:flex-row flex-wrap gap-2 mt-4 items-start ">
-                    {
-                        skills.map(skill => ( 
-                            <li key={skill.description} className="dark:bg-gray-secondary bg-gray-200 flex items-center gap-2 md:border border-gray-300 dark:md:border-gray-secondary md:p-3 rounded-lg w-full md:max-w-xs h-full md:h-20">
-                                <i className={`${skill.iconClass} text-3xl`} alt="skillIcon" />
-                                <p className="text-base font-medium dark:text-gray-200 text-gray-700">
-                                    {skill.description}
-                                </p>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </section>
+          <ul className="flex flex-col gap-2 mt-4 items-start">
+            {experiences.map((exp) => (
+              <li
+                key={exp.id}
+                className="dark:bg-gray-secondary bg-gray-200 md:border border-gray-300 dark:md:border-gray-secondary p-4 rounded-lg w-full"
+              >
+                <h4 className="text-lg font-semibold dark:text-gray-200 text-gray-800">
+                  {exp.role}
+                </h4>
 
-            <section className="mt-8">
-                <h3 className="text-xl font-bold text-org">
-                    My Work
-                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {exp.company}
+                </p>
 
-                <ul className="flex flex-col sm:flex-row flex-wrap gap-2 mt-4 items-start">
-                    {
-                        projects.map(project => (
-                            <Project
-                                key={project.id}
-                                id={project.id}
-                                title={project.title}
-                                year={project.year}
-                                description={project.description}
-                                source={project.source}
-                                demo={project.demo}
-                                level={project.level}
-                            />
-                        ))
-                    }
-                </ul>
-            </section>
+                <p className="text-sm text-gray-500 mt-1">{exp.duration}</p>
 
-           
-        </main>
-    )
+               
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="mt-8">
+          <h3 className="text-xl font-bold  text-org">Specialties</h3>
+
+          <ul className="flex flex-col sm:flex-row flex-wrap gap-2 mt-4 items-start ">
+            {skills.map((skill) => (
+              <li
+                key={skill.description}
+                className="dark:bg-gray-secondary bg-gray-200 flex items-center gap-2 md:border border-gray-300 dark:md:border-gray-secondary md:p-3 rounded-lg w-full md:max-w-xs h-full md:h-20"
+              >
+                <i className={`${skill.iconClass} text-3xl`} alt="skillIcon" />
+                <p className="text-base font-medium dark:text-gray-200 text-gray-700">
+                  {skill.description}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="mt-8">
+          <h3 className="text-xl font-bold text-org">My Work</h3>
+
+          <ul className="flex flex-col sm:flex-row flex-wrap gap-2 mt-4 items-start">
+            {projects.map((project) => (
+              <Project
+                key={project.id}
+                id={project.id}
+                title={project.title}
+                year={project.year}
+                description={project.description}
+                source={project.source}
+                demo={project.demo}
+                level={project.level}
+              />
+            ))}
+          </ul>
+        </section>
+      </main>
+    );
 }
 
 export default Home
