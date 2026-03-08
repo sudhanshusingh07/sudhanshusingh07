@@ -19,7 +19,7 @@ function About() {
   return (
     <main className="mt-20">
       <div className="hidden sm:block">
-        <img className="w-20 h-20 rounded-full" src="/logo.jpg" alt="logo" />
+        <img className="w-20 h-20 rounded-full" src="/logo.png" alt="logo" />
       </div>
 
       <section className="mt-8 flex flex-col gap-4 items-start">
