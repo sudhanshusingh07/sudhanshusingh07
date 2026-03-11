@@ -18,7 +18,7 @@ const navs = [
     id: 3,
     name: "Profile",
     path: "/profile",
-    icon: "/code.png",
+    icon: "/profile.png",
     className: "w-5 h-5",
   },
 
@@ -80,7 +80,7 @@ function Navbar() {
         <div className="w-full max-w-2xl mx-auto flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
           <div className="w-full py-1 flex items-center justify-between sm:hidden">
             <img
-              className="w-10 h-10 rounded-full"
+              className="w-10 h-10 rounded-full object-cover"
               src="/logo.jpg"
               alt="logo"
             />

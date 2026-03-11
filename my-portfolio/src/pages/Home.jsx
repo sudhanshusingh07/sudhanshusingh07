@@ -14,7 +14,11 @@ function Home() {
     return (
       <main>
         <section className="mt-28 sm:mt-16 flex flex-col gap-4 items-start sm:flex-row-reverse sm:items-center justify-between">
-          <img className="w-32 h-32 my-2" src="./DanceBot.gif" alt="enderman" />
+          <img
+            className="w-32 h-32 my-2 object-contain"
+            src="./DanceBot.gif"
+            alt="Enderman dancing animation"
+          />
 
           <span>
             <h1 className="text-3xl font-bold dark:text-gray-200 text-gray-800">
@@ -45,8 +49,6 @@ function Home() {
                 </p>
 
                 <p className="text-sm text-gray-500 mt-1">{exp.duration}</p>
-
-               
               </li>
             ))}
           </ul>

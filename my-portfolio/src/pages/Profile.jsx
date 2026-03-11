@@ -6,6 +6,9 @@ import {
   LeetCode,
   GeeksforGeeks,
 } from "../data/links";
+
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
+import { SiLeetcode, SiGeeksforgeeks } from "react-icons/si";
 import React from "react";
 
 function Profile() {
@@ -17,11 +20,7 @@ function Profile() {
             <tr>
               <td className="py-4 px-6">
                 <div className="flex items-center gap-4">
-                  <img
-                    className="w-10 h-10 dark:invert"
-                    src="/github.png"
-                    alt="GitHub"
-                  />
+                  <FaGithub className="w-8 h-8 text-black dark:text-white hover:scale-110 transition" />
                   <span>Github</span>
                 </div>
               </td>
@@ -29,14 +28,11 @@ function Profile() {
                 <Link href={Github}>Visit</Link>
               </td>
             </tr>
+
             <tr>
               <td className="py-4 px-6">
                 <div className="flex items-center gap-4">
-                  <img
-                    className="w-10 h-10 dark:invert"
-                    src="/linkedin.png"
-                    alt="LinkedIn"
-                  />
+                  <FaLinkedin className="w-8 h-8 text-blue-600 hover:scale-110 transition" />
                   <span>LinkedIn</span>
                 </div>
               </td>
@@ -44,14 +40,11 @@ function Profile() {
                 <Link href={Linkedin}>Visit</Link>
               </td>
             </tr>
+
             <tr>
               <td className="py-4 px-6">
                 <div className="flex items-center gap-4">
-                  <img
-                    className="w-10 h-10 dark:invert"
-                    src="/leetcode.png"
-                    alt="LeetCode"
-                  />
+                  <SiLeetcode className="w-8 h-8 text-orange-500 hover:scale-110 transition" />
                   <span>LeetCode</span>
                 </div>
               </td>
@@ -59,14 +52,11 @@ function Profile() {
                 <Link href={LeetCode}>Visit</Link>
               </td>
             </tr>
+
             <tr>
               <td className="py-4 px-6">
                 <div className="flex items-center gap-4">
-                  <img
-                    className="w-10 h-10 dark:invert"
-                    src="/geek.jpg"
-                    alt="GeeksforGeeks"
-                  />
+                  <SiGeeksforgeeks className="w-8 h-8 text-green-600 hover:scale-110 transition" />
                   <span>GeeksforGeeks</span>
                 </div>
               </td>
@@ -74,14 +64,11 @@ function Profile() {
                 <Link href={GeeksforGeeks}>Visit</Link>
               </td>
             </tr>
+
             <tr>
               <td className="py-4 px-6">
                 <div className="flex items-center gap-4">
-                  <img
-                    className="w-10 h-10 dark:invert"
-                    src="/instagram.png"
-                    alt="Instagram"
-                  />
+                  <FaInstagram className="w-8 h-8 text-pink-500 hover:scale-110 transition" />
                   <span>Instagram</span>
                 </div>
               </td>
