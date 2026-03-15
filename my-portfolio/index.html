@@ -1,38 +1,27 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+ <head>
   <meta charset="UTF-8" />
 
   <link rel="icon" type="image/svg+xml" href="./enderman-face.jpg" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  
-  <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://unpkg.com;">
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self';connect-src 'self' https://api.emailjs.com;img-src 'self' data: https:;script-src 'self' 'unsafe-inline' 'unsafe-eval';style-src 'self' 'unsafe-inline' https://unpkg.com;" />
 
-  <meta name="description" content="Sudhanshu Singh - MERN Stack Developer Portfolio. Explore my projects, skills, and experience in React, Node.js, and modern web development." />
-
-  <meta name="keywords" content="Sudhanshu Singh, MERN Developer, React Developer, Web Developer Portfolio, Node.js Developer" />
-
-  <meta name="author" content="Sudhanshu Singh" />
-
-  <meta property="og:title" content="Sudhanshu Singh">
-  <meta property="og:description" content="Portfolio of Sudhanshu Singh. Full Stack MERN Developer building modern web applications.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="/preview.png">
-
-  
+  <meta
+    name="description"
+    content="Sudhanshu Singh - MERN Stack Developer Portfolio. Explore my projects, skills, and experience in React, Node.js, and modern web development."
+  />
 
   <title>Sudhanshu Singh</title>
-
 </head>
 
-<body>
-  <div id="root"></div>
+  <body>
+    <div id="root"></div>
 
-  <script type="module" src="/src/main.jsx"></script>
-</body>
-
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
